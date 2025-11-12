@@ -1,16 +1,16 @@
 
+import { Box } from '@chakra-ui/react'
 import './App.css'
-import { Button } from '@chakra-ui/react'
-import Header from './Components/Header'
-import Quizzes from './Components/Quizzes'
+import Home from './Pages/Home/Home'
 
 function App() {
   
 
   return (
-    <>
-      <Header></Header>
-      <Quizzes></Quizzes>
+    < >
+      <Box >
+        <Home/>
+      </Box>
       
     </>
   )

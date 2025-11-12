@@ -1,4 +1,4 @@
-import { TableContainer, Table, Thead, Tr, Th, Tbody, Td, Tfoot, Checkbox, Button } from '@chakra-ui/react';
+import { TableContainer, Table, Thead, Tr, Th, Tbody, Td, Tfoot, Checkbox, Button, Card } from '@chakra-ui/react';
 import React from 'react';
 import Menus from './Menu';
 import { ChevronDownIcon } from '@chakra-ui/icons';
@@ -10,9 +10,19 @@ const dat=[{title: 'ytt', count: 0, create:'November 05, 2025', author:'admin', 
           ]
 
 const Tab = () => {
+  const getStatusColor = (status) => {
+    switch (status) {
+      case 'Published':
+        return 'green';
+      case 'Draft':
+        return 'gray';
+      default:
+        return 'gray';
+    }
+  };
     return (
-        <div>
-           <TableContainer py={'2rem'}>
+        <Card>
+           <TableContainer py={'2rem'} >
   <Table variant='simple'>
    
     <Thead>
@@ -33,7 +43,7 @@ const Tab = () => {
         <Td width='10%' textAlign='center'>{da.count}</Td>
         <Td textAlign='center'>{da.create}</Td>
         <Td>{da.author}</Td>
-        <Td textAlign='center'><Button width='45%' rounded='25px'>{da.status} <ChevronDownIcon/></Button></Td>
+        <Td textAlign='center'><Button width='45%' rounded='25px' colorScheme={getStatusColor(da.status)} >{da.status} <ChevronDownIcon/></Button></Td>
         <Td><Menus/></Td>
       </Tr>))}
       </Tbody>
@@ -42,7 +52,7 @@ const Tab = () => {
     </Tfoot>
   </Table>
 </TableContainer>
-        </div>
+        </Card>
     );
 };
 
