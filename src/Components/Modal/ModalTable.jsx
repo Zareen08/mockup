@@ -258,7 +258,8 @@ const Tabs = ({ onFormSubmit }) => {
                                     </Button>
                                     <Button 
                                         type="submit"
-                                        colorScheme='blue'
+                                        backgroundColor={'#7b68ee'}
+                                        color={'white'}
                                     >
                                         Add Question
                                     </Button>

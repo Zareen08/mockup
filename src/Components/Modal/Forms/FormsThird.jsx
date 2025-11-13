@@ -135,7 +135,7 @@ const FormsThird = ({ onFormSubmit }) => {
                                 name="quizFeedbackMode"
                             >
                                 <Stack spacing={5} direction='row'>
-                                    <Box border={'2px'} rounded={'2xl'} width={'50%'} borderColor={'#7b68ee'}>
+                                    <Box border={'2px'} rounded={'2xl'} width={'50%'} borderColor={'#7b68ee'} padding={2}>
                                         <Field 
                                             as={Radio}
                                             value='1'
@@ -146,7 +146,7 @@ const FormsThird = ({ onFormSubmit }) => {
                                             </Box>
                                         </Field>
                                     </Box>
-                                    <Box border={'2px'} rounded={'2xl'} width={'50%'} borderColor={'#7b68ee'}>
+                                    <Box border={'2px'} rounded={'2xl'} width={'50%'} borderColor={'#7b68ee'} padding={2}>
                                         <Field 
                                             as={Radio}
                                             value='2'

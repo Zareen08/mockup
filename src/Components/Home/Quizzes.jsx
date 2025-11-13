@@ -21,9 +21,10 @@ const Quizzes = () => {
         
 
         <Stack gap={5} padding={'1rem'} >
-            <Flex gap={'1rem'} justifyContent={'center'} alignItems={'center'}>
+            <Flex  justifyContent={'space-between'} alignItems={'center'}>
               
-                {buts.map(but=>(
+                <Flex gap={'1rem'}>
+                    {buts.map(but=>(
                     <Text 
                                 key={but}
                                 position="relative"
@@ -52,10 +53,12 @@ const Quizzes = () => {
                                 {but}
                             </Text>
                 ))}
+                </Flex>
                 
-              <InputGroup >
+              <Flex>
+                <InputGroup >
               <InputLeftElement><SearchIcon color='gray.300' /></InputLeftElement>
-              <Input type='search' placeholder='Search Quiz' />
+              <Input type='search' placeholder='Search Quiz' width={'300px'} />
               </InputGroup>
                <Center height='3rem'>
                <Divider orientation='vertical'/>
@@ -67,6 +70,7 @@ const Quizzes = () => {
                                     
                                 }}
                > <Text> <HiOutlineViewColumns size={20} /> </Text> Columns</Button>
+              </Flex>
 
             </Flex>
              
